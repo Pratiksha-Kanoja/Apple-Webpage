@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#apple_home>p:nth-child(2){
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(27, 26, 26);
+    color: white;
+}
+.firstback_img{
+    position: relative;
+}
+.firstback_img>div>p:nth-child(2){
+    color: red;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+}
+.BI_link{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+#Images{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+#Home_slidebar{
+    width: 100%;
+    height: auto;
+}
