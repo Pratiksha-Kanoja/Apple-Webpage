@@ -9,3 +9,24 @@
     object-fit: cover;
     height: 100%;
 }
+#images{
+    width: 48%;
+    height: 600px;
+    margin-bottom: 15px;
+}
+#images>img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+#slidebar{
+    width: 70%;
+    height: 510px;
+    margin-bottom: 15px;
+    margin: auto;
+}
+#slidebar>img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}

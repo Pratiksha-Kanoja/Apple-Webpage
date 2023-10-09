@@ -8,4 +8,20 @@ const Backimg = ({ children }) => {
   )
 }
 
-export default Backimg
+const Images = ({children}) => {
+  return (
+    <div id='images'>
+      <img src={children} alt="" />
+    </div>
+  )
+}
+
+const Slidbar = ({children}) => {
+  return (
+    <div id='slidebar'>
+      <img src={children} alt="" />
+    </div>
+  )
+}
+
+export {Backimg,Images,Slidbar}
