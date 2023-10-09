@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+#back_first{
+    font-size: 55px;
+    font-weight: bold;
+}
+#back_second{
+    font-size: 30px;
+    font-weight: 400;
+}
+#back_third{
+    font-size: 20px;
+    color: rgb(62, 172, 240);
+    text-decoration: none;
+}
