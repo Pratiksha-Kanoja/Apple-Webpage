@@ -2,6 +2,9 @@
     padding: 0;
     margin: 0;
 }
+.text-align{
+    text-align: center;
+}
 #apple_home>p:nth-child(2){
     text-align: center;
     padding: 10px;
