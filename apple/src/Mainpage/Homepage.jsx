@@ -17,14 +17,20 @@ import { BsApple } from "react-icons/bs";
 import Header from '../Hm-backgrd-img/Header';
 import Footer from '../Hm-backgrd-img/Footer'
 import { MdOutlineArrowForwardIos } from "react-icons/md";
+import {Paragraph} from '../Hm-backgrd-img/Paragraph'
 
 const Homepage = () => {
+
   return (
     <div id='apple_home'>
-      <Header />
+      <Header color={true}/>
+
+
+
+
       <p>Get up to ₹8000.00 instant savings on selected products with eligible HDFC Bank cards.* <span style={{color:"rgb(62, 172, 240)",marginLeft:"10px",fontSize:"15px"}}>Shop now <MdOutlineArrowForwardIos/></span> </p>
-      <div className='firstback_img'>
-        <Backhead >
+      <div className='firstback_img text-align'>
+        <Backhead>
           <Backheadfirst>iPhone 15 Pro</Backheadfirst>
           <Backheadsecond>Titanium. So strong. So light. So Pro.</Backheadsecond>
           <div className='BI_link'>
@@ -36,7 +42,7 @@ const Homepage = () => {
 
       </div>
 
-      <div className='firstback_img'>
+      <div className='firstback_img text-align'>
         <Backhead>
           <div style={{ color: "black" }}>
             <Backheadfirst >iPhone 15</Backheadfirst>
@@ -51,7 +57,7 @@ const Homepage = () => {
 
       </div>
 
-      <div className='firstback_img'>
+      <div className='firstback_img text-align'>
         <Backhead>
           <Backheadfirst> <BsApple /> Watch</Backheadfirst>
           <p>SERIES 9</p>
@@ -78,7 +84,9 @@ const Homepage = () => {
         <Slidbar>{first_slide}</Slidbar>
       </div>
 
-      <Footer/>
+      <Footer>
+        <Paragraph>*Instant savings, otherwise referred to as instant cashback on the Apple Store Online, is available with the purchase of an eligible product for qualifying HDFC Bank Credit Cards and EasyEMI Credit Cards only. Minimum transaction value of ₹10001.00 applies. Click here to see instant savings amounts and eligible devices. Instant savings is available for up to two orders per rolling 90-day period with an eligible card. Card eligibility is subject to terms and conditions between you and your card-issuing bank. Total transaction value is calculated after any trade-in credit or eligible discount applied. Any subsequent order adjustment(s) or cancellation(s) may result in instant savings being recalculated, and any refund may be adjusted to account for instant savings clawback; this may result in no refund being made to you. Offer may be revised or withdrawn at any time without any prior notice. Terms and conditions apply. Offer cannot be combined with Apple Store for Education or Corporate Employee Purchase Plan pricing. Multiple separate orders cannot be combined for instant savings.</Paragraph>
+        <Paragraph>A subscription is required for Apple TV+.</Paragraph></Footer>
     </div>
   )
 }
