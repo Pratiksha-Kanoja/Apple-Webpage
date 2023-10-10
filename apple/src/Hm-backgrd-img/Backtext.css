@@ -5,16 +5,13 @@
 #back_first{
     font-size: 55px;
     font-weight: bold;
-    text-align: center;
 }
 #back_second{
     font-size: 30px;
     font-weight: 400;
-    text-align: center;
 }
 #back_third{
     font-size: 20px;
     color: rgb(62, 172, 240);
     text-decoration: none;
-    text-align: center;
 }
