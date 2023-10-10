@@ -15,4 +15,22 @@ const Paragraphbold = ({children}) => {
   )
 }
 
-export {Paragraph,Paragraphbold}
+const Paragraph12 = ({children}) => {
+  return (
+    <div id='paragraph-12'>{children}</div>
+  )
+}
+
+const Paragraph18 = ({children}) => {
+  return (
+    <div id='paragraph-18'>{children}</div>
+  )
+}
+
+const Paragraph15 = ({children}) => {
+  return (
+    <div id='paragraph-15'>{children}</div>
+  )
+}
+
+export {Paragraph,Paragraphbold,Paragraph12,Paragraph18,Paragraph15}
