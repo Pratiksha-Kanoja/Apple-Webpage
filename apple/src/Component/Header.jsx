@@ -25,7 +25,7 @@ const Header = ({color}) => {
   //header = header-white ......this css is applied
   const header = (color ? 'header-black' : 'header-white');
   return (
-    <div className={header}>
+    <div className={header} >
         <div>
             <button style={{fontSize:"24px"}} onClick={BackToHome}>
             <AiFillApple />

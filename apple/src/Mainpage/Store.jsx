@@ -1,14 +1,14 @@
 import React from 'react'
 import './Store.css'
-import Header from '../Hm-backgrd-img/Header'
-import Footer from '../Hm-backgrd-img/Footer'
-import { Spantag1, Spantag2 } from '../Hm-backgrd-img/Spantag'
+import Header from '../Component/Header'
+import Footer from '../Component/Footer'
+import { Spantag1, Spantag2 } from '../Tags/Spantag'
 import Image_seven from '../Hm-backgrd-img/Images/Image_seven.png'
 import { Storeimgbox, Storetextbox } from '../Store/Storeimg-box'
 import { BsCreditCard } from "react-icons/bs";
 import { LuMonitorSmartphone } from "react-icons/lu";
 import { IoBriefcaseOutline } from "react-icons/io5";
-import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Hm-backgrd-img/Paragraph'
+import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
 const Store = () => {
     return (
         <div id='apple_store'>

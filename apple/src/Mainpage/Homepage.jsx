@@ -14,10 +14,10 @@ import Backhead from '../Hm-backgrd-img/Backhead'
 import { Backheadfirst, Backheadsecond, Backheadthird } from '../Hm-backgrd-img/Backtext'
 import './Homepage.css'
 import { BsApple } from "react-icons/bs";
-import Header from '../Hm-backgrd-img/Header';
-import Footer from '../Hm-backgrd-img/Footer'
+import Header from '../Component/Header';
+import Footer from '../Component/Footer'
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import {Paragraph} from '../Hm-backgrd-img/Paragraph'
+import {Paragraph} from '../Tags/Paragraph'
 
 const Homepage = () => {
 

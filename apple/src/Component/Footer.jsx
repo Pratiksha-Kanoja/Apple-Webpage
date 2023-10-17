@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import { Paragraph, Paragraphbold } from './Paragraph'
+import { Paragraph, Paragraphbold } from '../Tags/Paragraph'
 const Footer = ({children}) => {
   return (
     <div id='Footer'>
