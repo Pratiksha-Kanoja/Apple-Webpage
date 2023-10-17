@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#apple15pro-container{
+    background-color: black;
+}
+#apple15pro-container>div:nth-child(2){
+    background-color: rgb(37, 44, 60);
+    color: white;
+    padding: 10px 0px;
+}
+#apple15pro-container>div:nth-child(3){
+    height: 600px;
+    background-color: black;
+}
+.videopro15{
+    width: 100%;
+    height: 100%;
+}
+#apple15pro-container>div:nth-child(3)>p:nth-child(1){
+    position: absolute;
+    top: 150px;
+    left: 42%;
+    font-size: 30px;
+    font-weight: 600;
+}
+#apple15pro-container>div:nth-child(3)>button{
+    position: absolute;
+    bottom: 150px;
+    left: 47%;
+    background-color: rgb(0, 123, 255);
+    outline: none;
+    border: 1px solid black;
+    width: 40px;
+    height: 30px;
+    color: white;
+    font-size: 20px;
+    border-radius: 40%;
+}
+#apple15pro-container>div:nth-child(3)>p:nth-child(4){
+    position: absolute;
+    bottom: 100px;
+    left: 36%;
+    font-size: 20px;
+    font-weight: 500;
+}
+.get-highlights{
+    background-color: rgb(28, 28, 28);
+}
+.get-highlights>div{
+    width: 90%;
+    margin: auto;
+    padding-top: 230px;
+    padding-bottom: 150px;
+}
+.get-highlights>div>div:nth-child(2){
+    width: 100%;
+    height: 800px;
+    background-color: black;
+    border-radius: 20px;
+    position: relative;
+    margin-top: 30px;
+}
+.get-highlights>div>div:nth-child(2)>div:nth-child(1){
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+.videopro15-2{
+    width: 90%;
+    height: 60%;
+    margin-left: 140px;
+    margin-top: 180px;
+}
+.closer-look{
+    /* border: 1px solid red; */
+    background-color: black;
+}
+.closer-look>p{
+    /* border: 1px solid green; */
+    padding-top: 200px;
+    margin-left: 100px;
+}
+.closer-look>div{
+    width: 50%;
+    height: 500px;
+    margin: auto;
+    margin-top: 80px;
+    padding-bottom: 200px;
+}
+.explore-story{
+    background-color: rgb(28, 28, 28);
+}
+.explore-story>p:nth-child(1){
+    padding-top: 200px;
+    margin-left: 100px;
+}
+.explore-story>div{
+    width: 70%;
+    margin: auto;
+    padding-bottom: 150px;
+    margin-top: 80px;
+    padding-bottom: 250px;
+}
+.explore-story>div>div:nth-child(2){
+    margin-top: 100px;
+}
+.explore-story>div>div:nth-child(3){
+    margin-top: 20px;
+}
+.explore-story>div>div:nth-child(3)>div{
+    width: 49%;
+}
+.explore-story>div>div:nth-child(4){
+    margin-top: 20px;
+}
+.explore-story>div>div:nth-child(4)>div{
+    width: 35%;
+    font-size: 20px;
+    padding: 40px;
+    font-weight: 700;
+}
+#apple15pro-container>div:nth-child(7){
+    background-color: black;
+}
+#apple15pro-container>div:nth-child(7)>div{
+    background-color: black;
+    width: 70%;
+    margin: auto;
+    padding-top: 180px;
+    padding-bottom: 180px;
+}
+#apple15pro-container>div:nth-child(7)>div>div:nth-child(1){
+    width: 20%;
+    height: 200px;
+    margin: auto;
+}
+#apple15pro-container>div:nth-child(7)>div>div:nth-child(4)>div{
+    width: 35%;
+    font-size: 20px;
+    padding: 40px;
+    font-weight: 700;
+    transition: 0s;
+    padding-bottom: 400px;
+}
+.Gigablast{
+    padding-bottom: 200px;
+}
+.Gigablast>div>div{
+    width: 35%;
+    font-size: 20px;
+    padding: 40px;
+    font-weight: 700;
+    transition: 0s;
+}
+.designtomake-diff{
+    background-color:#101010;
+    padding: 100px;
+    height: 650px;
+    margin-bottom: 80px;
+}
+.designtomake-diff>div:nth-child(1){
+    /* border: 2px solid red; */
+    width: 25%;
+    margin-bottom: 20px;
+}
+.designtomake-diff>div:nth-child(5)>div{
+    width: 35%;
+    font-size: 20px;
+    padding: 40px;
+    font-weight: 700;
+    transition: 0s;
+}
+.ios17{
+    background-color:#101010;
+    padding: 100px;
+    height: 1000px;
+}
+.ios17>div:nth-child(3){
+    margin-top: 60px;
+}
+.ios17>div:nth-child(3)>div{
+    width: 30%;
+}
+.ios17>div:nth-child(4)>p{
+    font-weight: 700;
+    width: 30%;
+    margin-top: 70px;
+}
+.waytoshop{
+    background-color:#101010;
+    padding: 100px;
+}
+.waytoshop>div:nth-child(2)>div{
+    width: 27%;
+    margin-top: 50px;
+    color: white;
+    background-color: rgb(90, 90, 90);
+    padding: 30px;
+    border-radius: 20px;
+}
+.waytoshop>div:nth-child(2)>div>div:nth-child(1){
+    height: 200px;
+}
+.waytoshop>div:nth-child(2)>div>div:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+    font-size: 34px;
+}
+.iphone_options{
+    background-color: black;
+    padding: 100px;
+}
+.iphone_options>div:nth-child(2){
+    width: 65%;
+    height: 300px;
+    margin-top: 50px;
+}
+.iphone_options>div:nth-child(2)>div{
+    width: 33%;
+    height: 300px;
+}
+
+
+
+
+
+
+
+
+.font78{
+    font-size: 78px;
+    font-weight: bold;
+}
+.font70{
+    font-size: 70px;
+    font-weight: 600;
+}
+.gray{
+    color: gray;
+}
+.white{
+    color: white;
+}
+.blue123{
+    color: rgb(0, 123, 255);
+}
