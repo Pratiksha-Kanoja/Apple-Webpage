@@ -5,8 +5,10 @@ import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from 
 import { Spantag1, Spantag2, Spantag35, Spantag25 } from '../Tags/Spantag'
 import './Registration.css';
 import { BsArrowUpRight } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom'
 
 const Signin = () => {
+    const router = useNavigate();
     return (
         <div id='signin-container'>
             <Header />
@@ -25,7 +27,7 @@ const Signin = () => {
                         <input type="checkbox" style={{ marginTop: "100px", marginRight: "10px" }} />
                         <label htmlFor="Remember me">Remember me</label>
                         <p style={{ marginTop: "30px", color: "rgb(83,120,203)" }}>Forgotten your password? <BsArrowUpRight style={{ fontSize: "12px" }} /></p>
-                        <p style={{ marginTop: "10px", marginBottom: "150px" }}>Do not have an Apple ID? <span style={{ color: "rgb(83,120,203)" }}>Create yours now.<BsArrowUpRight style={{ fontSize: "12px" }} /></span></p>
+                        <p style={{ marginTop: "10px", marginBottom: "150px" }}>Do not have an Apple ID? <span style={{ color: "rgb(83,120,203)" }} onClick={()=>(router("/register"))}>Create yours now.<BsArrowUpRight style={{ fontSize: "12px" }} /></span></p>
                     </div>
                 </div>
             </div>
