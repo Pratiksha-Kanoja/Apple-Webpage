@@ -18,9 +18,10 @@ import Header from '../Component/Header';
 import Footer from '../Component/Footer'
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import {Paragraph} from '../Tags/Paragraph'
+import { useNavigate } from 'react-router-dom'
 
 const Homepage = () => {
-
+  const router = useNavigate();
   return (
     <div id='apple_home'>
       <Header color={true}/>
@@ -29,7 +30,7 @@ const Homepage = () => {
 
 
       <p>Get up to ₹8000.00 instant savings on selected products with eligible HDFC Bank cards.* <span style={{color:"rgb(62, 172, 240)",marginLeft:"10px",fontSize:"15px"}}>Shop now <MdOutlineArrowForwardIos/></span> </p>
-      <div className='firstback_img text-align'>
+      <div className='firstback_img text-align' onClick={()=>(router("/iPhone15Pro"))}>
         <Backhead>
           <Backheadfirst>iPhone 15 Pro</Backheadfirst>
           <Backheadsecond>Titanium. So strong. So light. So Pro.</Backheadsecond>
