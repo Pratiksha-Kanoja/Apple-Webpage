@@ -5,7 +5,6 @@ import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from 
 import { Spantag1, Spantag2, Spantag35, Spantag25 } from '../Tags/Spantag'
 import './Registration.css'
 import { SiHandshake } from "react-icons/si";
-import Footer from '../Component/Footer'
 const Registration = () => {
 
   return (
