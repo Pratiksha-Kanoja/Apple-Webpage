@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.bag_container-body>div {
+    width: 67%;
+    height: auto;
+    margin: auto;
+}
+
+.bag_container-body>div>div:nth-child(2) {
+    height: 60px;
+    margin-top: 40px;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 247);
+    padding-left: 100px;
+    padding-right: 80px;
+    padding-top: 30px;
+    font-size: 13px;
+}
+
+.bag_container-body>div>div:nth-child(2)>div:nth-child(1) {
+    width: 25px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.add_product {
+    border-bottom: 0.1px solid gray;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.pro_img {
+    width: 18%;
+    height: 200px;
+    margin-left: 20px;
+}
+
+.pro_detail {
+    width: 77%;
+}
+
+.pro_detail1 {
+    padding-bottom: 30px;
+}
+
+.pro_detail1>div:nth-child(1) {
+    width: 52%;
+}
+
+.pro_detail1>div:nth-child(2) {
+    width: 37%;
+    margin-left: 30px;
+}
+
+.pro_detail1>div:nth-child(3) {
+    width: 15%;
+    text-align: end;
+}
+
+.pro_detail2>div:nth-child(1) {
+    margin-top: 30px;
+}
+
+.pro_detail2>div:nth-child(1)>span {
+    width: 92%;
+    font-weight: 700;
+}
+
+.pro_detail2>ul>li {
+    margin: 5px 0px;
+    margin-left: 40px;
+    font-size: 15px;
+}
+
+.pro_detail2>p {
+    margin-left: 20px;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.pro_detail3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pro_detail4 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.pro_detail4>div {
+    margin-top: 20px;
+}
+
+.bill {
+    width: 80%;
+    height: auto;
+    margin-left: 20%;
+    padding-top: 40px;
+    font-size: 18px;
+}
+
+.bill>div {
+    margin-top: 5px;
+}
+
+.bill>div:nth-child(3)>p:nth-child(2) {
+    margin-bottom: 20px;
+}
+
+.bill>div:nth-child(5) {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.bill>div:nth-child(5)>div {
+    margin-top: 30px;
+}
+
+.bill>div:nth-child(5)>div>div {
+    width: 41%;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgb(245, 245, 247);
+    padding: 30px;
+}
+
+.bill>div:nth-child(5)>div>div>div {
+    font-size: 25px;
+    font-weight: bold;
+    height: 100px;
+}
+
+.bill>div:nth-child(5)>div>div>button {
+    width: 100%;
+    font-size: 18px;
+    background-color: rgb(0, 123, 255);
+    outline: none;
+    border: none;
+    margin-top: 30px;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.bill>div:nth-child(5)>div>div>p {
+    padding: 20px;
+}
+#bag-container>div:nth-child(3){
+    border-top: 1px solid rgb(212, 212, 212);
+    border-bottom: 1px solid rgb(212, 212, 212);
+}
+#bag-container>div:nth-child(3)>p{
+    width: 67%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.also_like>div{
+    width: 67%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.also_like>div>div:nth-child(2){
+    /* border: 2px solid red; */
+    margin-top: 100px;
+}
+.also_like-img{
+    width: 27%;
+    height: 450px;
+}
+
+.also_like-img>div:nth-child(1){
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 180px;
+    margin: auto;
+}
+.also_like-img>div:nth-child(1)>img{
+    object-fit: contain;
+}
+.also_like-img>div:nth-child(2){
+    height: 220px;
+}
+.also_like-img>div:nth-child(2)>p:nth-child(1){
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.also_like-img>div:nth-child(2)>div:nth-child(4){
+    width: 32%;
+    margin-top: 10px;
+}
+.also_like-img>div:nth-child(2)>div:nth-child(4)>div{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 2px;
+}
+.also_like-img>div:nth-child(2)>div:nth-child(4)>div>button{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+}
+.also_like-img>button{
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    color: white;
+    background-color: rgb(0, 123, 255);
+    border: none;
+    border-radius: 10px;
+}
+.also_like>div>div:nth-child(4){
+    position: relative;
+}
+.also_like>div>div:nth-child(4)>div:nth-child(1){
+    margin-top: 120px;
+}
+.also_like>div>div:nth-child(4)>div:nth-child(2){
+    width: 30%;
+    position: absolute;
+    top:120px;
+    left: 10%;
+}
+.also_like>div>div:nth-child(4)>div:nth-child(2)>p{
+    margin-top: 15px;
+}
+.Question>div{
+    width: 67%;
+    margin: auto;
+}

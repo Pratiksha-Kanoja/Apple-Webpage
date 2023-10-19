@@ -1,36 +1,35 @@
 import React, { useState } from 'react'
 import './Button.css'
-import { BsBag,BsBoxSeam } from "react-icons/bs";
-import { RiBookmarkLine,RiCloseCircleLine,RiAccountCircleFill } from "react-icons/ri";
-import { useNavigate } from 'react-router-dom';
 
 const Button = () => {
-  const router=useNavigate();
+  const [imageClicked, setImageClicked] = useState({
+    first: false,
+    second: false,
+    ground: false
+  });
+  const onClickHandler = (order) => {
+    setImageClicked({[order]: !imageClicked[order]});
+  };
   return (
     <div>
-
-      <div className="container1">
-        <BsBag />
-
-        <div className="first1"></div>
-
-        <div className="second1 white">
-          <div>
-            <p style={{fontSize:"30px",fontWeight:"600"}}>Your Bag is empty.</p>
-            <p style={{marginTop:"30px"}}>Sign in to see if you have any saved items</p>
-            <p style={{marginTop:"30px"}}>My Profile</p>
-            <div>
-              <p style={{marginTop:"15px",fontWeight:"700"}}><span style={{marginRight:"10px"}}><BsBoxSeam/></span>Order</p>
-              <p style={{marginTop:"15px",fontWeight:"700"}}><span style={{marginRight:"10px"}}><RiBookmarkLine/></span>Your Saves</p>
-              <p style={{marginTop:"15px",fontWeight:"700"}}><span style={{marginRight:"10px"}}><RiCloseCircleLine/></span>Account</p>
-              <p style={{marginTop:"15px",fontWeight:"700"}} onClick={()=>(router("/signin"))}><span style={{marginRight:"10px"}}><RiAccountCircleFill/></span>Sign in</p>
-            </div>
-          </div>
-
-        </div>
+      <div className="Ccontainer">
+        <button onClick={() => onClickHandler("ground")} className="ground">
+          Ground Floor
+        </button>
+        <button onClick={() => onClickHandler("first")} className="ground">
+          First Floor
+        </button>
+        <button onClick={() => onClickHandler("second")} className="ground">
+          Second Floor
+        </button>
+      </div>
+      <div className="image">
+        {imageClicked.ground && <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbCDZZfnTfo6P6OVAR4PEbLGDBPs3hkIocmS18c9Y6MA&s" alt="ground" />}
+        {imageClicked.first && <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLCssoOV6-yMdij-74nk0njlnxCbKgxtUW_ZAN1VRQpw&s" alt="first" />}
+        {imageClicked.second && <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMv1pwwe9oVALyh_uxZgHCUrZVwCd1jlp0SLaE4DGjvQ&s" alt="second" />}
       </div>
     </div>
-  )
+    )
 }
 
 export default Button

@@ -52,6 +52,10 @@ const Header = ({ color }) => {
               <p style={{ marginTop: "30px" }}>Sign in to see if you have any saved items</p>
               <p style={{ marginTop: "30px" }}>My Profile</p>
               <div>
+                <div className='display-flex justify_c-spacebetween'>
+                  <p style={{ marginTop: "15px", fontWeight: "700" }}>Bag</p>
+                  <button onClick={() => (router("/bag"))} style={{width:"100px",padding:"10px"}}>Review Bag</button>
+                </div>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><BsBoxSeam /></span>Order</p>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><RiBookmarkLine /></span>Your Saves</p>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><RiCloseCircleLine /></span>Account</p>

@@ -6,6 +6,7 @@ import Registration from "./Mainpage/Registration";
 import Signin from "./Mainpage/Signin";
 import Apple15pro from "./Mainpage/Apple15pro";
 import Button from "./Mainpage/Button";
+import Bag from "./Mainpage/Bag";
 function App() {
   return (
     <div>
@@ -16,6 +17,7 @@ function App() {
         <Route exact path="/iPhone15Pro" element={<Apple15pro/>} />
         <Route exact path="/register" element={<Registration/>} />
         <Route exact path="/signin" element={<Signin/>} />
+        <Route exact path="/bag" element={<Bag/>} />
         {/* <Route exact path="/" element={<Button/>} /> */}
       </Routes>
     </div>

@@ -25,4 +25,10 @@ const Spantag35 = ({children}) => {
   )
 }
 
-export {Spantag1,Spantag2,Spantag35,Spantag25}
+const Spantag40 = ({children}) => {
+  return (
+    <span id="span_40">{children}</span>
+  )
+}
+
+export {Spantag1,Spantag2,Spantag35,Spantag25,Spantag40}
