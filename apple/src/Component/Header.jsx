@@ -24,6 +24,8 @@ const Header = ({ color }) => {
   //Same for store page it gives "False" value 
   //header = header-white ......this css is applied
   const header = (color ? 'header-black' : 'header-white');
+  const first1 = (color ? 'first-black' : 'first-white');
+  const second1 = (color ? 'second-black' : 'second-white');
   return (
     <div className={header} >
       <div>
@@ -44,9 +46,9 @@ const Header = ({ color }) => {
         <div className="container1">
           <BsBag />
 
-          <div className="first1"></div>
+          <div className={first1}></div>
 
-          <div className="second1">
+          <div className={second1}>
             <div>
               <p style={{ fontSize: "30px", fontWeight: "600" }}>Your Bag is empty.</p>
               <p style={{ marginTop: "30px" }}>Sign in to see if you have any saved items</p>
@@ -54,7 +56,7 @@ const Header = ({ color }) => {
               <div>
                 <div className='display-flex justify_c-spacebetween'>
                   <p style={{ marginTop: "15px", fontWeight: "700" }}>Bag</p>
-                  <button onClick={() => (router("/bag"))} style={{width:"100px",padding:"10px"}}>Review Bag</button>
+                  <button onClick={() => (router("/bag"))} style={{ width: "100px", padding: "10px" }}>Review Bag</button>
                 </div>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><BsBoxSeam /></span>Order</p>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><RiBookmarkLine /></span>Your Saves</p>

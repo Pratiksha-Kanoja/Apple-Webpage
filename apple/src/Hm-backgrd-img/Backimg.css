@@ -1,8 +1,11 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 #back_img{
     width: 100%;
     height: 600px;
     margin-bottom: 15px;
-    position: relative;
 }
 #back_img>img{
     width: 100%;
