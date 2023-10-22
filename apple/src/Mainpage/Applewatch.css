@@ -39,20 +39,14 @@
 }
 .product_box>div:nth-child(4){
     border: 2px solid green;
-    height: 15px;
-    width: 30%;
+    height: 30px;
+    width: 70%;
     margin: auto;
     margin-top: 20px;
     display: flex;
     justify-content: space-evenly;
 }
-.image2{
-    border: 2px solid red;
-    display: flex;
-    justify-content: space-between;
-    width: 25%;
-}
-.image2>img{
+.product_box>div:nth-child(4)>img{
     width: 20%;
 }
 .product_box>div:nth-child(5){
