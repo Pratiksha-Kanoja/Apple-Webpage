@@ -12,33 +12,32 @@
     height: auto;
     margin-left: 16%;
 }
-#apple_store-body>div:nth-child(1){
+.div_first{
     display: flex;
     margin-top: 100px;
 }
-#apple_store-body>div:nth-child(1)>div:nth-child(1){
+.div_first>div:nth-child(1){
     width: 65%;
 }
-#apple_store-body>div:nth-child(1)>div:nth-child(2){
+.div_first>div:nth-child(2){
     width: 35%;
-    
 }
-#apple_store-body>div:nth-child(1)>div:nth-child(2)>div{
+.div_first>div:nth-child(2)>div{
     width: 50%;
     height: 50px;
     display: flex;
     justify-content: space-between;
 }
-#apple_store-body>div:nth-child(1)>div:nth-child(2)>div>div:nth-child(1){
+.div_first>div:nth-child(2)>div>div:nth-child(1){
     width: 18%;
     height: 32px;
     margin-top: 8px;
 }
-#apple_store-body>div:nth-child(1)>div:nth-child(2)>div>div:nth-child(1)>img{
+.div_first>div:nth-child(2)>div>div:nth-child(1)>img{
     width: 100%;
     height: 100%;
 }
-#apple_store-body>div:nth-child(1)>div:nth-child(2)>div>div:nth-child(2){
+.div_first>div:nth-child(2)>div>div:nth-child(2){
     width: 80%;
     height: 50px;
     font-size: 14px;

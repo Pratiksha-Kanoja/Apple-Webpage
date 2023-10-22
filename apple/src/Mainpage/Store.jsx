@@ -17,7 +17,7 @@ const Store = () => {
 
             <div id='apple_store-body'>
                 {/* 1st div */}
-                <div>
+                <div className='div_first'>
                     <div>
                         <Spantag1>Store. </Spantag1>
                         <span style={{ color: "gray" }}>
