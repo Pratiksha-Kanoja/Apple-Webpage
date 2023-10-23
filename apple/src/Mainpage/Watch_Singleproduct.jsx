@@ -1,13 +1,8 @@
-import React from 'react'
-import Header from '../Component/Header'
-import { useState } from 'react'
-import { Backheadfirst, Backheadsecond, Backheadthird } from '../Hm-backgrd-img/Backtext'
-import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
-import { Spantag1, Spantag2, Spantag35, Spantag25, Spantag40 } from '../Tags/Spantag'
-import Image_seven from '../Hm-backgrd-img/Images/Image_seven.png'
-import './Applewatch.css'
-import { useNavigate } from 'react-router-dom'
-const Applewatch = () => {
+import React, { useState } from 'react'
+import './Watch_Singleproduct.css'
+import { useParams } from 'react-router-dom';
+
+const Watch_Singleproduct = () => {
     const [product, setproduct] = useState([
         {
             new: "New", title: "Apple Watch Series 9", image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-card-40-s9-202309?wid=680&hei=528&fmt=p-jpg&qlt=95&.v=1693943487336",
@@ -41,87 +36,20 @@ const Applewatch = () => {
         { new: "", title: "Apple Watch SE", image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-digitalmat-gallery-3-202309?wid=728&hei=666&fmt=png-alpha&.v=1693849835005", image2: "", price: "From $249 or $20.75/mo. for 12 mo.*", bttn: "Buy", id:11 },
         { new: "", title: "Apple Watch SE", image: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/watch-se-digitalmat-gallery-4-202309?wid=728&hei=666&fmt=png-alpha&.v=1693894356398", image2: "", price: "From $249 or $20.75/mo. for 12 mo.*", bttn: "Buy", id:12 }
     ])
-
-    const router= useNavigate()
-    return (
-        <div id='applewatch-container'>
-            <Header />
-            <div className='applewatch_body'>
-
-                {/* 1st div */}
-
-                <div className='div_first'>
-                    <div>
-                        <Spantag1>Shop Apple Watch </Spantag1>
-                    </div>
-                    <div className='div_first-right'>
-                        <div>
-                            <div>
-                                <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-chat-specialist-icon-202305_AV2?wid=70&hei=70&fmt=jpeg&qlt=90&.v=1684947928853" alt="" />
-                            </div>
-                            <div>
-                                <p style={{ fontWeight: "bold" }} >Need shopping help?</p>
-                                <p style={{ color: "rgb(34, 102, 205)" }}>Ask a Specialist</p>
-                            </div>
-                        </div>
-                        <div>
-                            <div>
-                                <img src={Image_seven} alt="" />
-                            </div>
-                            <div>
-                                <p style={{ fontWeight: "bold" }} >Visit an Apple Store</p>
-                                <p style={{ color: "rgb(34, 102, 205)" }}>Find one near you </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                {/* 2nd div */}
-
-                <div className='div_second'>
-                    <div>
-                        <Spantag2>All models.</Spantag2>
-                        <span style={{ color: "gray" }}>
-                            <Spantag2>Take your pick.</Spantag2>
-                        </span>
-                    </div>
-
-                    <div>{product?.length ?
-                        <div className='display-flex justify_c-spacebetween'>
-                            {product.map((pro) => (
-                                <div className='product_box' onClick={()=>(router(`/singleproduct/${pro.id}`))}>
-                                    <p>{pro.new}</p>
-                                    <p>{pro.title}</p>
-                                    <div>
-                                        <img src={pro.image} alt="" className='videopro15' />
-                                    </div>
-                                    <div>{pro.image2?.length? <div className='display-flex '>
-                                        {pro.image2.map((img)=>(
-                                            <div className='image2'>
-                                                <img src={img.img1} alt="" className='videopro15'/>
-                                            </div>
-                                        ))}
-                                    </div> 
-                                    : 
-                                    <div></div>}
-                                        
-                                    </div>
-
-                                    <div className='display-flex justify_c-spacebetween'>
-                                        <p>{pro.price}</p>
-                                        <button>{pro.bttn}</button>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        :
-                        <div>Loading</div>}
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    )
+    const { id } = useParams();
+  return (
+    <div>
+        {product?.id? 
+        <div>{product.map((singlepro)=>(
+          <div>
+             <p>{singlepro.title}</p>
+          </div>  
+        )).id}</div> 
+        : 
+        <div>Loading....</div> }
+    </div>
+   
+  )
 }
 
-export default Applewatch
+export default Watch_Singleproduct

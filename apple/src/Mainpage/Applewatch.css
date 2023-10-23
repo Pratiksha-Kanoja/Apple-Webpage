@@ -1,5 +1,6 @@
 #applewatch-container{
     background-color: rgb(237, 237, 237);
+    height: auto;
 }
 .applewatch_body{
     width: 80%;
@@ -8,6 +9,7 @@
 }
 .div_second{
     margin-top: 100px;
+    padding-bottom: 50px;
 }
 .div_second>div:nth-child(2)>div{
     flex-wrap: wrap;
@@ -38,16 +40,14 @@
     height: 250px;
 }
 .product_box>div:nth-child(4){
-    border: 2px solid green;
     height: 30px;
-    width: 70%;
+    width: 20%;
     margin: auto;
     margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
 }
-.product_box>div:nth-child(4)>img{
+.image2{
     width: 20%;
+    height: 10%;
 }
 .product_box>div:nth-child(5){
     margin-top: 20px;

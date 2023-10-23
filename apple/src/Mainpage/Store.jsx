@@ -9,7 +9,9 @@ import { BsCreditCard } from "react-icons/bs";
 import { LuMonitorSmartphone } from "react-icons/lu";
 import { IoBriefcaseOutline } from "react-icons/io5";
 import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
+import { useNavigate } from 'react-router-dom'
 const Store = () => {
+    const router = useNavigate()
     return (
         <div id='apple_store'>
             <Header color={false}/>
@@ -60,7 +62,7 @@ const Store = () => {
                         <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-13-ipad-nav-202210?wid=400&hei=260&fmt=png-alpha&.v=1664912135437" alt="" />
                         <p>iPad</p>
                     </div>
-                    <div>
+                    <div onClick={()=>(router("/applewatch"))}>
                         <img src="https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/store-card-13-watch-nav-202309_GEO_IN?wid=400&hei=260&fmt=png-alpha&.v=1693703814407" alt="" />
                         <p>Apple Watch</p>
                     </div>
