@@ -1,0 +1,136 @@
+#Watch_Singleproduct-container>div:nth-child(1){
+    border: 2px solid red;
+    width: 100%;
+    height: 900px;
+    background-color: black;
+    opacity: 0.6;
+}
+
+
+
+
+
+#Watch_Singleproduct-container>div:nth-child(2){
+    border: 2px solid green;
+    width: 70%;
+    position: absolute;
+    top: 0;
+    left: 15%;
+}
+
+
+
+
+
+
+
+
+
+
+#Watch_Singleproduct-container>div:nth-child(2)>div:nth-child(1){
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 50%;
+    font-weight: 500;
+    color: gray;
+    background-color: white;
+}
+#Watch_Singleproduct-container>div:nth-child(2)>div:nth-child(2){
+    width: 70%;
+    margin: auto;
+    height: 50px;
+    border-radius: 30px;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    background-color: white;
+}
+#Watch_Singleproduct-container>div:nth-child(2)>div:nth-child(2)>p{
+    border-radius: 30px;
+    height: 20px;
+    padding: 13px;
+    font-weight: 500;
+}
+.single_product{
+    width: 100%;
+    height: 630px;
+    margin: auto;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.single_product-left{
+    width: 39%;
+    padding: 65px;
+}
+.single_product-left>div:nth-child(1){
+    width: 100%;
+    height: 330px;
+    margin-top: 50px;
+}
+.single_product-left>p:nth-child(2){
+    margin-top: 80px;
+    font-size: 12px;
+    color: gray;
+}
+.single_product-left>div:nth-child(3){
+    width: 100%;
+    height: 30px;
+    display: flex;
+}
+.single_product-image2{
+    width: 20%;
+    height: 20px;
+    margin: auto;
+}
+.single_product-image2>div{
+    width: 20%;
+    height: 70%;
+}
+
+
+
+
+.single_product-right{
+    width: 48%;
+    padding-right: 50px;
+    padding-top: 35px;
+}
+.single_product-right>p:nth-child(1){
+    font-size: 13px;
+    font-weight: 600;
+}
+.single_product-right>p:nth-child(2){
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.single_product-right>div:nth-child(3)>p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+.single_product-right>div:nth-child(3)>button{
+    padding: 9px;
+    border-radius: 20px;
+    width: 12%;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(0, 123, 255);
+    border: none;
+
+}
+.single_product-right>div:nth-child(4){
+    margin-top: 50px;
+}
+.single_product-right>div:nth-child(4)>div>div{
+    border-bottom: 1px solid rgb(201, 201, 201);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 10px;
+}

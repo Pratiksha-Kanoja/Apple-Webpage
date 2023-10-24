@@ -22,7 +22,7 @@ function App() {
         <Route exact path="/bag" element={<Bag/>} /> */}
         <Route exact path="/" element={<Applewatch/>} />
 
-        <Route exact path="/singleproduct/:id" element={<Watch_Singleproduct/>} />
+        <Route exact path="/:productId" element={<Watch_Singleproduct/>} />
         {/* <Route exact path="/" element={<Slidebar/>} /> */}
         {/* <Route exact path="/" element={<Button/>} /> */}
       </Routes>
