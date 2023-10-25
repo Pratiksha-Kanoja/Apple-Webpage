@@ -1,5 +1,4 @@
 #Watch_Singleproduct-container>div:nth-child(1){
-    border: 2px solid red;
     width: 100%;
     height: 900px;
     background-color: black;
@@ -11,7 +10,6 @@
 
 
 #Watch_Singleproduct-container>div:nth-child(2){
-    border: 2px solid green;
     width: 70%;
     position: absolute;
     top: 0;
