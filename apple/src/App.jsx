@@ -9,20 +9,23 @@ import Button from "./Mainpage/Button";
 import Bag from "./Mainpage/Bag";
 import Applewatch from "./Mainpage/Applewatch";
 import Watch_Singleproduct from "./Mainpage/Watch_Singleproduct";
+import Singleproduct from "./Mainpage/Practice";
+
 function App() {
   return (
     <div>
       <Routes>
-        {/* <Route path='/' element={<Homepage/>} />
+        <Route path='/' element={<Homepage/>} />
         <Route exact path='/store' element={<Store/>} />
         <Route exact path='/slidebar' element={<Slidebar/>} />
         <Route exact path="/iPhone15Pro" element={<Apple15pro/>} />
         <Route exact path="/register" element={<Registration/>} />
         <Route exact path="/signin" element={<Signin/>} />
-        <Route exact path="/bag" element={<Bag/>} /> */}
-        <Route exact path="/" element={<Applewatch/>} />
+        <Route exact path="/bag" element={<Bag/>} />
+        <Route exact path="/applewatch" element={<Applewatch/>} />
 
-        <Route exact path="/:productId" element={<Watch_Singleproduct/>} />
+        <Route exact path="/applewatch" element={<Watch_Singleproduct/>} />
+        <Route exact path='/practice/:id' element={<Singleproduct/>} />
         {/* <Route exact path="/" element={<Slidebar/>} /> */}
         {/* <Route exact path="/" element={<Button/>} /> */}
       </Routes>

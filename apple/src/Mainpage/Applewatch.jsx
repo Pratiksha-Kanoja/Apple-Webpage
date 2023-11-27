@@ -1,22 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from '../Component/Header'
-import { useState } from 'react'
 import { Spantag1, Spantag2} from '../Tags/Spantag'
 import Image_seven from '../Hm-backgrd-img/Images/Image_seven.png'
 import './Applewatch.css'
 import { useNavigate } from 'react-router-dom'
-import products from './Watch_data';
+import toast from 'react-hot-toast'
+import api from '../Helpers/AxiosConfig'
 
 
 const Applewatch = () => {
-    const [product, setproduct] = useState()
+    const[products,setProducts]=useState([]);
+
+    useEffect(()=>{
+        const getproducts= async()=>{
+            try {
+                const {data} = await api.get('/products/get-all-products')
+
+                if(data.success){
+                    setProducts(data.products)
+                }
+            } catch (error) {
+                toast.error(error.data.message)
+            }
+        }
+        getproducts()
+    },[])
 
     const router= useNavigate()
     return (
         <div id='applewatch-container'>
             <Header />
             <div className='applewatch_body'>
-
                 {/* 1st div */}
 
                 <div className='div_first'>
@@ -58,8 +72,8 @@ const Applewatch = () => {
                     <div>{products?.length ?
                         <div className='display-flex justify_c-spacebetween'>
                             {products.map((pro) => (
-                                <div className='product_box' onClick={()=>(router(`/${pro.id}`))}>
-                                    <p>{pro.new1}</p>
+                                <div onClick={()=> router(`/practice/${pro._id}`)} className='product_box'>
+                                    <p>{pro.new}</p>
                                     <p>{pro.title}</p>
                                     <div>
                                         <img src={pro.image} alt="" className='videopro15' />
