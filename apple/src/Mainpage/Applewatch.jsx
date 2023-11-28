@@ -72,7 +72,7 @@ const Applewatch = () => {
                     <div>{products?.length ?
                         <div className='display-flex justify_c-spacebetween'>
                             {products.map((pro) => (
-                                <div onClick={()=> router(`/practice/${pro._id}`)} className='product_box'>
+                                <div onClick={()=> router(`/applewatch/singlewatch/${pro._id}`)} className='product_box'>
                                     <p>{pro.new}</p>
                                     <p>{pro.title}</p>
                                     <div>
