@@ -6,6 +6,7 @@ import './Applewatch.css'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import api from '../Helpers/AxiosConfig'
+import Watch_Singleproduct from './Watch_Singleproduct'
 
 
 const Applewatch = () => {
@@ -27,6 +28,8 @@ const Applewatch = () => {
     },[])
 
     const router= useNavigate()
+
+      
     return (
         <div id='applewatch-container'>
             <Header />
@@ -73,7 +76,7 @@ const Applewatch = () => {
                         <div className='display-flex justify_c-spacebetween'>
                             {products.map((pro) => (
                                 <div onClick={()=> router(`/applewatch/singlewatch/${pro._id}`)} className='product_box'>
-                                    <p>{pro.new}</p>
+                                    <p>{pro.new1}</p>
                                     <p>{pro.title}</p>
                                     <div>
                                         <img src={pro.image} alt="" className='videopro15' />

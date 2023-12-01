@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import api from '../Helpers/AxiosConfig';
 import './Watch_Singleproduct.css'
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
@@ -7,6 +7,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 const Watch_Singleproduct = () => {
     const [productData, setProductData] = useState({});
     const { id } = useParams();
+    const router = useNavigate();
 
     useEffect(() => {
         async function getSingleProductData() {
@@ -35,7 +36,7 @@ const Watch_Singleproduct = () => {
             <div>
                 {/* div 1st */}
                 <div>
-                    <p>X</p>
+                    <p onClick={()=>router('/applewatch')}>X</p>
                 </div>
 
                 {/* div 2nd */}
@@ -67,7 +68,7 @@ const Watch_Singleproduct = () => {
                     </div>
 
                     <div className='single_product-right'>
-                        <p>{productData.new}</p>
+                        <p>{productData.new1}</p>
                         <p>{productData.title}</p>
                         <div className='display-flex justify_c-spacebetween'>
                             <p>{productData.price}</p>
