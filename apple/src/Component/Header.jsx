@@ -1,5 +1,5 @@
 import './Header.css'
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { BsBag, BsBoxSeam } from "react-icons/bs";
 import { RiBookmarkLine, RiCloseCircleLine, RiAccountCircleFill } from "react-icons/ri";
 import { HiOutlineSearch } from "react-icons/hi";
@@ -26,6 +26,8 @@ const Header = ({ color }) => {
   const header = (color ? 'header-black' : 'header-white');
   const first1 = (color ? 'first-black' : 'first-white');
   const second1 = (color ? 'second-black' : 'second-white');
+
+
   return (
     <div className={header} >
       <div>
@@ -61,7 +63,7 @@ const Header = ({ color }) => {
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><BsBoxSeam /></span>Order</p>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><RiBookmarkLine /></span>Your Saves</p>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><RiCloseCircleLine /></span>Account</p>
-                <p style={{ marginTop: "15px", fontWeight: "700" }} onClick={() => (router("/signin"))}><span style={{ marginRight: "10px" }}><RiAccountCircleFill /></span>Sign in</p>
+                <p style={{ marginTop: "15px", fontWeight: "700" }} onClick={() => (router("/signin"))}><span style={{ marginRight: "10px" }}><RiAccountCircleFill /></span>Sign in </p>
               </div>
             </div>
 

@@ -1,11 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../Component/Header'
-import { Backheadfirst, Backheadsecond, Backheadthird } from '../Hm-backgrd-img/Backtext'
-import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
-import { Spantag1, Spantag2, Spantag35, Spantag25 } from '../Tags/Spantag'
+import { Paragraph, Paragraph12, Paragraph15 } from '../Tags/Paragraph'
+import { Spantag35, Spantag25 } from '../Tags/Spantag'
 import './Registration.css'
 import { SiHandshake } from "react-icons/si";
+import { useNavigate } from 'react-router-dom'
+import toast from 'react-hot-toast'
+import api from '../Helpers/AxiosConfig'
 const Registration = () => {
+
+  const router = useNavigate();
+  const [userData, setUserData] = useState({ firstname: "", lastname: "", country: "", DOB: "", email: "", password: "", confirmpassword: "", countrycode: "", phoneNo: "" });
+
+  function handlechange(event) {
+    setUserData({ ...userData, [event.target.name]: event.target.value })
+  }
+
+  async function formsubmit(event) {
+    event.preventDefault();
+    if (userData.firstname && userData.lastname && userData.country && userData.DOB && userData.email && userData.password && userData.confirmpassword && userData.countrycode && userData.phoneNo) {
+      if (userData.password === userData.confirmpassword) {
+        const {data} = await api.post('/auth/register',{userData})
+        if(data.success){
+          toast.success("Register successfully !!")
+          setUserData({ firstname: "", lastname: "", country: "", DOB: "", email: "", password: "", confirmpassword: "", countrycode: "", phoneNo: "" })
+          router('/signin')
+        }
+        else{
+          toast.error(data.error);
+        }
+      }
+      else {
+        toast.error("password and confirmpassword not matched")
+      }
+    }
+    else {
+      toast.error("All fields are mandatory")
+    }
+  }
 
   return (
     <div id='register-container'>
@@ -20,38 +52,46 @@ const Registration = () => {
             <Paragraph12>FAQ</Paragraph12>
           </div>
         </div>
-
       </div>
-      <div className='box' style={{ marginTop: "20px" }}>
+
+
+
+
+
+      <form className='box' style={{ marginTop: "20px" }} onSubmit={formsubmit}>
         <div className='btm-bordergray'>
           <div id='form' className='text-align'>
             <Spantag35>Create Your Apple ID</Spantag35>
             <Paragraph15>One Apple ID is all you need to access all Apple services.</Paragraph15>
             <div className='display-flex justify_c-spacebetween margin-bttm'>
-              <input type="text" placeholder='First Name' className='input' style={{ width: "43%" }} />
-              <input type="text" placeholder='Last Name' className='input' style={{ width: "43%" }} />
+              {/* name and last name */}
+              <input type="text" placeholder='First Name' className='input' style={{ width: "43%" }} onChange={handlechange} name='firstname' value={userData.firstname}/>
+              <input type="text" placeholder='Last Name' className='input' style={{ width: "43%" }} onChange={handlechange} name='lastname' value={userData.lastname}/>
             </div>
             <div style={{ textAlign: "left" }}>
               <label htmlFor="country">COUNTRY/REGION</label>
-              <input type="text" placeholder='First Name' className='input' />
-              <input type="text" placeholder='Date of birth' className='input' />
+              {/* country & borthdate */}
+              <input type="text" placeholder='COUNTRY/REGION' className='input' onChange={handlechange} name='country' value={userData.country}/>
+              <input type="date" placeholder='Date of birth' className='input' onChange={handlechange} name='DOB' value={userData.DOB}/>
             </div>
           </div>
         </div>
 
         <div className='btm-bordergray'>
           <div id='form' >
-            <input type="text" placeholder='name@example.com' className='input' />
+            {/* email & password & confirmpass */}
+            <input type="text" placeholder='name@example.com' className='input' onChange={handlechange} name='email' value={userData.email}/>
             <Paragraph>This will be your new Apple ID.</Paragraph>
-            <input type="text" placeholder='password' className='input' />
-            <input type="text" placeholder='confirm password' className='input' />
+            <input type="password" placeholder='password' className='input' onChange={handlechange} name='password' value={userData.password}/>
+            <input type="password" placeholder='confirm password' className='input' onChange={handlechange} name='confirmpassword' value={userData.confirmpassword}/>
           </div>
         </div>
 
         <div className='btm-bordergray'>
           <div id='form' >
-            <input type="text" placeholder='+91 (India)' className='input' />
-            <input type="text" placeholder='phone number' className='input' />
+            {/* mobile no & countrycode */}
+            <input type="text" placeholder='+91 (India)' className='input' onChange={handlechange} name='countrycode' value={userData.countrycode}/>
+            <input type="text" placeholder='phone number' className='input' onChange={handlechange} name='phoneNo' value={userData.phoneNo}/>
             <Paragraph>Make sure you enter a phone number you can always access. It will be used to verify your identity any time you sign in on a new device or web browser. Messaging or data rates may apply.</Paragraph>
             <div className='display-flex justify_c-spacebetween' style={{ marginTop: "20px" }}>
               <label htmlFor="text verify">Verify with a:</label>
@@ -65,12 +105,12 @@ const Registration = () => {
 
         <div className='btm-bordergray'>
           <div id='form' >
-            <input type="checkbox" style={{ marginRight: "10px" }} />
+            <input type="checkbox" style={{ marginRight: "10px" }} required />
             <label htmlFor="announcement">Announcements
               <Paragraph>Receive Apple emails and communications including announcements, marketing, recommendations and updates about Apple products, services and software.</Paragraph>
             </label>
 
-            <input type="checkbox" style={{ marginTop: "20px", marginRight: "10px" }} />
+            <input type="checkbox" style={{ marginTop: "20px", marginRight: "10px" }} required />
             <label htmlFor="apps">Apps, Music, TV and More
               <Paragraph>Receive Apple emails and communications including new releases, exclusive content, special offers and marketing, and recommendations for apps, music, movies, TV, books, podcasts and more.</Paragraph>
             </label>
@@ -95,27 +135,35 @@ const Registration = () => {
           </div>
         </div>
 
-        <div className='btm-bordergray text-align' style={{border:"none"}}>
+        <div className='btm-bordergray text-align' style={{ border: "none" }}>
           <div id='form'>
             <SiHandshake style={{ fontSize: "30px" }} />
             <Paragraph>Your Apple ID information is used to allow you to sign in securely and access your data. Apple records certain data for security, support and reporting purposes. If you agree, Apple may also use your Apple ID information to send you marketing emails and communications, including based on your use of Apple services. See how your data is managed.</Paragraph>
             <button className='continueform'>Continue</button>
           </div>
         </div>
-      </div>
+      </form>
+
+
+
+
+
+
+
+
 
       <div className='register-footer text-align'>
 
         <Paragraph>More ways to shop: Find an Apple Store or other retailer near you. Or call 000800 040 1966.</Paragraph>
         <div className=' display-flex justify_c-spacebetween'>
-          <div className=' display-flex justify_c-spacebetween' style={{width:"65%"}}>
-          <Paragraph>Copyright © 2023 Apple Inc. All rights reserved.</Paragraph>
-          <Paragraph>Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map</Paragraph>
+          <div className=' display-flex justify_c-spacebetween' style={{ width: "65%" }}>
+            <Paragraph>Copyright © 2023 Apple Inc. All rights reserved.</Paragraph>
+            <Paragraph>Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map</Paragraph>
           </div>
           <div>
-          <Paragraph>India</Paragraph>
+            <Paragraph>India</Paragraph>
           </div>
-          
+
         </div>
       </div>
 
