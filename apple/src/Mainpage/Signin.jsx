@@ -14,6 +14,7 @@ const Signin = () => {
     const router = useNavigate();
     const [account, setAccount] = useState(false);
     const [userData, setUserData] = useState({ email: "", password: "" })
+
     const { Login, state } = useContext(AuthContext)
 
     function handlechange(event) {
@@ -23,13 +24,13 @@ const Signin = () => {
     async function login_form(event) {
         event.preventDefault();
         if (userData.email && userData.password) {
-            const response = await api.post('/auth/login', { userData })
-            if (response.data.success) {
-                localStorage.setItem("my-token", JSON.stringify(response.data.token))
-                // Login(response.data.user);
+            const {data} = await api.post('/auth/login', { userData })
+            if (data.success) {
+                localStorage.setItem("my-token", JSON.stringify(data.token))
+                Login(data.user);
                 toast.success("Login Successfully")
-                // router('/')
-                setUserData({ email: "", password: "" })
+                router('/')
+                // setUserData({ email: "", password: "" })
             }
             else {
                 toast.error("Login Failed")

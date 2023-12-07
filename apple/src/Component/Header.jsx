@@ -5,6 +5,7 @@ import { RiBookmarkLine, RiCloseCircleLine, RiAccountCircleFill } from "react-ic
 import { HiOutlineSearch } from "react-icons/hi";
 import { AiFillApple } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
+import {AuthContext} from '../Context/AuthContext'
 const Header = ({ color }) => {
   //We use color as a 'prop'
   const router = useNavigate()
@@ -27,6 +28,7 @@ const Header = ({ color }) => {
   const first1 = (color ? 'first-black' : 'first-white');
   const second1 = (color ? 'second-black' : 'second-white');
 
+  const{state, Logout} = useContext(AuthContext)
 
   return (
     <div className={header} >
@@ -63,7 +65,8 @@ const Header = ({ color }) => {
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><BsBoxSeam /></span>Order</p>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><RiBookmarkLine /></span>Your Saves</p>
                 <p style={{ marginTop: "15px", fontWeight: "700" }}><span style={{ marginRight: "10px" }}><RiCloseCircleLine /></span>Account</p>
-                <p style={{ marginTop: "15px", fontWeight: "700" }} onClick={() => (router("/signin"))}><span style={{ marginRight: "10px" }}><RiAccountCircleFill /></span>Sign in </p>
+                <p style={{ marginTop: "15px", fontWeight: "700" }} onClick={() => (router("/signin"))}><span style={{ marginRight: "10px" }}><RiAccountCircleFill /></span>Sign in</p>
+                <p style={{ marginTop: "15px", fontWeight: "700" }} onClick={Logout}><span style={{ marginRight: "10px" }}><RiAccountCircleFill /></span>Signout {state?.user?.name}</p>
               </div>
             </div>
 
