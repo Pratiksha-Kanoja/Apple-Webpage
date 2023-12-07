@@ -16,7 +16,7 @@ function Backheadfirst({children}) {
   
   const Backheadthird = ({children}) => {
     return (
-     <a href="#" id='back_third'>{children} <IoIosArrowForward/></a>
+     <p id='back_third'>{children} <IoIosArrowForward/></p>
     )
   }
   

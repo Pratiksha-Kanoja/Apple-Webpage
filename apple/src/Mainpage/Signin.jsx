@@ -15,7 +15,7 @@ const Signin = () => {
     const [account, setAccount] = useState(false);
     const [userData, setUserData] = useState({ email: "", password: "" })
 
-    const { Login, state } = useContext(AuthContext)
+    const { Login } = useContext(AuthContext)
 
     function handlechange(event) {
         setUserData({ ...userData, [event.target.name]: event.target.value })
