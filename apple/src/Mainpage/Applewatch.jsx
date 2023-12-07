@@ -6,8 +6,6 @@ import './Applewatch.css'
 import { useNavigate } from 'react-router-dom'
 import toast from 'react-hot-toast'
 import api from '../Helpers/AxiosConfig'
-import Watch_Singleproduct from './Watch_Singleproduct'
-
 
 const Applewatch = () => {
     const[products,setProducts]=useState([]);

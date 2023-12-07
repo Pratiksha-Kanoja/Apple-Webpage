@@ -1,5 +1,5 @@
 import './Header.css'
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { BsBag, BsBoxSeam } from "react-icons/bs";
 import { RiBookmarkLine, RiCloseCircleLine, RiAccountCircleFill } from "react-icons/ri";
 import { HiOutlineSearch } from "react-icons/hi";

@@ -1,5 +1,5 @@
 import './Backhead.css'
-import React, { Children } from 'react'
+import React from 'react'
 
 const Backhead = ({children}) => {
   return (

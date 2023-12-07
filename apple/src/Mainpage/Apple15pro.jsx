@@ -3,9 +3,8 @@ import './Apple15pro.css'
 import Header from '../Component/Header'
 import large_2x from '../Video/large_2x.mp4'
 import first_video from '../Video/first_video.mp4'
-import { Backheadfirst, Backheadsecond, Backheadthird } from '../Hm-backgrd-img/Backtext'
-import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
-import { Spantag1, Spantag2, Spantag35, Spantag25 } from '../Tags/Spantag'
+import { Paragraph,  Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
+import { Spantag1, Spantag2} from '../Tags/Spantag'
 import { BiPlayCircle, BiChevronRight } from "react-icons/bi";
 import { BsCreditCard } from "react-icons/bs";
 import { LuMonitorSmartphone } from "react-icons/lu";

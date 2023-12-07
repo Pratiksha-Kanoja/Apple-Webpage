@@ -8,7 +8,7 @@ import { Storeimgbox, Storetextbox } from '../Store/Storeimg-box'
 import { BsCreditCard } from "react-icons/bs";
 import { LuMonitorSmartphone } from "react-icons/lu";
 import { IoBriefcaseOutline } from "react-icons/io5";
-import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
+import { Paragraph, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
 import { useNavigate } from 'react-router-dom'
 const Store = () => {
     const router = useNavigate()

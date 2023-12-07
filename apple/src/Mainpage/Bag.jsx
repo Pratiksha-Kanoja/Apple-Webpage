@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import './Bag.css'
 import Header from '../Component/Header'
 import Footer from '../Component/Footer'
-import { Backheadfirst, Backheadsecond, Backheadthird } from '../Hm-backgrd-img/Backtext'
-import { Paragraph, Paragraphbold, Paragraph12, Paragraph18, Paragraph15 } from '../Tags/Paragraph'
-import { Spantag1, Spantag2, Spantag35, Spantag25, Spantag40 } from '../Tags/Spantag'
+import { Paragraph} from '../Tags/Paragraph'
+import { Spantag25, Spantag40 } from '../Tags/Spantag'
 import { FaChevronDown } from "react-icons/fa";
 import { AiFillApple, AiOutlineMinusCircle,AiOutlinePlus } from "react-icons/ai";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { BsBoxSeam, BsBagHeart, BsArrowUp } from "react-icons/bs";
+import { BsBoxSeam, BsBagHeart } from "react-icons/bs";
 import { HiOutlineArrowLongUp } from "react-icons/hi2";
 const Bag = () => {
     const[Image,setImage]=useState({
