@@ -27,6 +27,11 @@
     width: 20%;
     height: 380px;
 }
+#Footer>div>p:nth-child(3){
+    font-size: 12px;
+    color: gray;
+    margin-top: 10px;
+}
 #Footer>div>div:nth-child(4){
     width: 100%;
     height: 50px;
@@ -38,4 +43,35 @@
     width: 66.5%;
     height: 50px;
     margin-left: 30px;
+}
+
+@media screen and (min-width:250px) and (max-width:950px){
+    #Footer>div{
+        width: 100%;
+    }
+    #Footer>div>p:nth-child(3){
+        margin-left: 30px;
+    }
+    #Footer>div>div:nth-child(4){
+        display: flex;
+        flex-wrap: wrap;
+        height: auto;
+        margin-left: 30px;
+        width: 95%;
+    }
+    #Footer>div>div:nth-child(4)>div:nth-child(2){
+        width:100%;
+        height: auto;
+        margin-left: 0px;
+    }
+    #Footer>div>div:nth-child(2){
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    #Footer>div>div:nth-child(2)>div{
+        width: 100%;
+        height: auto;
+        margin-left: 30px;
+    }
 }

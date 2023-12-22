@@ -39,3 +39,18 @@
     width: 100%;
     height: auto;
 }
+
+@media screen and (min-width:600px) and (max-width:900px){
+    #apple_home>p:nth-child(2){
+        font-size: 12px;
+    }
+    .BI_link{
+        width: 30%;
+    }
+}
+
+@media screen and (min-width:250px) and (max-width:900px){
+    .BI_link{
+        width: 40%;
+    }
+}

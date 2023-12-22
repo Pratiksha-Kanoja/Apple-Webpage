@@ -1,14 +1,14 @@
-
-.header-black{
+.header-black {
     background-color: black;
     height: 45px;
     width: 100%;
-    position:sticky;
+    position: sticky;
     top: 0px;
     z-index: 1;
     opacity: 0.93;
 }
-.header-black>div{
+
+.header-black>div:nth-child(1) {
     height: 40px;
     width: 70%;
     margin: auto;
@@ -18,7 +18,8 @@
     padding-top: 13px;
     z-index: 1;
 }
-.header-black>div>button{
+
+.header-black>div:nth-child(1)>button {
     background-color: black;
     border: none;
     outline: none;
@@ -26,12 +27,13 @@
     font-size: 16px;
     margin-top: -5px;
     height: 28px;
-    
+
 }
-.header-white{
+.header-white {
     background-color: white;
 }
-.header-white>div{
+
+.header-white>div:nth-child(1) {
     height: 40px;
     width: 70%;
     margin: auto;
@@ -41,7 +43,8 @@
     padding-top: 13px;
     z-index: 1;
 }
-.header-white>div>button{
+
+.header-white>div:nth-child(1)>button {
     background-color: white;
     border: none;
     outline: none;
@@ -49,15 +52,31 @@
     font-size: 16px;
     margin-top: -5px;
     height: 28px;
-    
+
 }
 
+@media screen and (min-width:700px) and (max-width:1000px) {
+    .header-black>div:nth-child(1) {
+        width: 100%;
+    }
 
+    .header-black>div:nth-child(1)>button {
+        font-size: 12px;
+    }
+
+    .header-white>div:nth-child(1) {
+        width: 100%;
+    }
+
+    .header-white>div:nth-child(1)>button {
+        font-size: 12px;
+    }
+}
 
 /* bag hover */
 
 
-.first-black{
+.first-black {
     background-color: black;
     opacity: 0.7;
     width: 100%;
@@ -68,7 +87,8 @@
     z-index: 1;
     display: none;
 }
-.first-white{
+
+.first-white {
     background-color: white;
     opacity: 0.7;
     width: 100%;
@@ -79,14 +99,17 @@
     z-index: 1;
     display: none;
 }
+
 .container1:hover .first-black {
     display: block;
- }
- .container1:hover .first-white {
+}
+
+.container1:hover .first-white {
     display: block;
- }
- .second-black{
-    background-color: black ;
+}
+
+.second-black {
+    background-color: black;
     width: 100%;
     height: 400px;
     opacity: 1;
@@ -95,9 +118,10 @@
     right: 0px;
     z-index: 1;
     display: none;
- }
- .second-white{
-    background-color: white ;
+}
+
+.second-white {
+    background-color: white;
     width: 100%;
     height: 400px;
     opacity: 1;
@@ -106,20 +130,115 @@
     right: 0px;
     z-index: 1;
     display: none;
- }
-  .container1:hover .second-black {
-   display: block;
-  }
-  .container1:hover .second-white {
+}
+
+.container1:hover .second-black {
     display: block;
-   }
-  .second-black>div{
+}
+
+.container1:hover .second-white {
+    display: block;
+}
+
+.second-black>div {
     padding: 50px;
     margin-left: 200px;
     color: white;
-  }
-  .second-white>div{
+}
+
+.second-white>div {
     padding: 50px;
     margin-left: 200px;
     color: black;
-  }
+}
+
+
+/* hide menu */
+
+.header-black>div:nth-child(2) {
+    height: 40px;
+    width: 94.5%;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+    display: none;
+}
+
+.header-black>div:nth-child(2)>button {
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    margin-top: -5px;
+    height: 28px;
+
+}
+
+.header-black>div:nth-child(2)>div {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.header-white>div:nth-child(2) {
+    height: 40px;
+    width: 94.5%;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 1;
+    display: none;
+}
+
+.header-white>div:nth-child(2)>button {
+    background-color: white;
+    border: none;
+    outline: none;
+    color: black;
+    font-size: 16px;
+    margin-top: -5px;
+    height: 28px;
+}
+
+.header-white>div:nth-child(2)>div {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (min-width:250px) and (max-width:700px) {
+    .header-black>div:nth-child(1) {
+        display: none;
+    }
+
+    .header-black>div:nth-child(2) {
+        display: flex;
+    }
+
+    .header-white>div:nth-child(1) {
+        display: none;
+    }
+
+    .header-white>div:nth-child(2) {
+        display: flex;
+    }
+
+    .second-black>div {
+        padding: 50px;
+        margin-left: 20px;
+    }
+
+    .second-white>div {
+        padding: 50px;
+        margin-left: 20px;
+    }
+}

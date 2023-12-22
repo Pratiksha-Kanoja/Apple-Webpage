@@ -1,11 +1,10 @@
 import React from 'react'
 import './Footer.css'
 import { Paragraph, Paragraphbold } from '../Tags/Paragraph'
-const Footer = ({children}) => {
+const Footer = ({ children }) => {
   return (
     <div id='Footer'>
       <div>
-        
         <Paragraph>{children}</Paragraph>
         <div>
           <div>
@@ -79,9 +78,10 @@ const Footer = ({children}) => {
             <Paragraph>Contact Apple</Paragraph>
           </div>
         </div>
-        <Paragraph>More ways to shop: Find an Apple Store or other retailer near you. Or call 000800 040 1966.</Paragraph>
+        <p>More ways to shop: Find an Apple Store or other retailer near you. Or call 000800 040 1966.</p>
+
         <div>
-        <Paragraph>Copyright © 2023 Apple Inc. All rights reserved.</Paragraph>
+          <Paragraph>Copyright © 2023 Apple Inc. All rights reserved.</Paragraph>
           <div>
             <Paragraph>Privacy Policy | Terms of Use | Sales Policy | Legal | Site Map</Paragraph>
           </div>

@@ -15,3 +15,27 @@
     color: rgb(62, 172, 240);
     text-decoration: none;
 }
+
+@media screen and (min-width:600px) and (max-width:900px){
+    #back_first{
+        font-size: 50px;
+    }
+    #back_second{
+        font-size: 25px;
+    }
+    #back_third{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width:250px) and (max-width:600px){
+    #back_first{
+        font-size: 40px;
+    }
+    #back_second{
+        font-size: 15px;
+    }
+    #back_third{
+        font-size: 10px;
+    }
+}
